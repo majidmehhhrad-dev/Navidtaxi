@@ -1,1 +1,141 @@
 
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تعاونی تاکسیرانی نویدرفاه اسرار</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap');
+
+*{box-sizing:border-box}
+body{
+ margin:0;font-family:Vazirmatn,Tahoma,sans-serif;
+ background:#f3f3f3;color:#222;
+}
+header{
+ background:linear-gradient(120deg,#171717,#343434);
+ color:white;text-align:center;padding:35px 15px;
+ border-bottom:7px solid #f5c400;
+}
+header h1{font-size:clamp(25px,5vw,40px);margin:0}
+header p{color:#f5c400;font-size:17px}
+nav{background:#222;text-align:center;padding:14px}
+nav a{color:white;text-decoration:none;margin:0 13px}
+nav a:hover{color:#f5c400}
+.hero{
+ padding:55px 15px;text-align:center;color:white;
+ background:linear-gradient(#171717aa,#171717bb),
+ url('sabzdaran.jpg') center/cover;
+}
+.hero h2{font-size:30px}
+.taxi{font-size:85px;margin:15px}
+.btn{
+ display:inline-block;background:#f5c400;color:#171717;
+ padding:11px 22px;border-radius:9px;text-decoration:none;
+ font-weight:bold;margin-top:10px
+}
+.container{max-width:1150px;margin:30px auto;padding:0 15px}
+.layout{display:grid;grid-template-columns:180px 1fr 180px;gap:18px}
+.ad,.panel{
+ background:white;border-radius:14px;padding:22px;
+ box-shadow:0 3px 15px #00000010;
+}
+.ad{text-align:center;border:2px dashed #d4aa00;min-height:230px}
+.panel h2{border-right:5px solid #f5c400;padding-right:12px}
+.news{text-align:center;padding:30px;color:#777}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.car-card{background:white;border:1px solid #ddd;border-radius:12px;padding:17px}
+.car-card h3{margin-top:0}
+.price{color:#b38a00;font-weight:bold}
+form input,form textarea{
+ display:block;width:100%;padding:12px;margin:12px 0;
+ border:1px solid #ccc;border-radius:8px;font:inherit
+}
+form button{
+ background:#f5c400;border:0;padding:12px 25px;
+ border-radius:8px;font:inherit;font-weight:bold;cursor:pointer
+}
+footer{background:#222;color:white;text-align:center;padding:25px;margin-top:35px}
+@media(max-width:750px){
+ .layout{grid-template-columns:1fr}
+ .ad{min-height:110px}
+ nav a{display:inline-block;margin:5px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>تعاونی تاکسیرانی نویدرفاه اسرار</h1>
+<p>سامانه جامع خدمات، اطلاع‌رسانی و خرید و فروش تاکسی</p>
+</header>
+
+<nav>
+<a href="#home">صفحه اصلی</a>
+<a href="#news">اخبار و رویدادها</a>
+<a href="#cars">خرید و فروش تاکسی</a>
+<a href="#contact">ارتباط با مدیر</a>
+</nav>
+
+<section class="hero" id="home">
+<h2>به سامانه تعاونی تاکسیرانی نویدرفاه اسرار خوش آمدید</h2>
+<div class="taxi">🚕</div>
+<p>همراه شما در خدمات و معاملات تاکسی</p>
+<a class="btn" href="#cars">مشاهده آگهی‌های تاکسی</a>
+</section>
+
+<main class="container">
+<div class="layout">
+
+<aside class="ad">
+<h3>جایگاه تبلیغات</h3>
+<p>فضای معرفی کسب‌وکارها و خدمات مرتبط</p>
+</aside>
+
+<div>
+<section class="panel" id="news">
+<h2>اخبار و رویدادها</h2>
+<div class="news">
+هنوز خبری ثبت نشده است.
+</div>
+</section>
+
+<section class="panel" id="cars" style="margin-top:20px">
+<h2>آگهی‌های خرید و فروش تاکسی</h2>
+<p>آگهی‌های تأییدشده تعاونی در این بخش نمایش داده می‌شوند.</p>
+<div class="news">در حال حاضر آگهی‌ای برای نمایش ثبت نشده است.</div>
+</section>
+
+<section class="panel" id="contact" style="margin-top:20px">
+<h2>ارتباط با مدیر تعاونی</h2>
+<p>برای ارسال درخواست فروش تاکسی، مشخصات و تصاویر خودرو را آماده کنید.</p>
+<form onsubmit="event.preventDefault();alert('برای ارسال واقعی پیام و عکس، باید سامانه دریافت اطلاعات به سایت متصل شود.');">
+<input type="text" placeholder="نام و نام خانوادگی" required>
+<input type="tel" placeholder="شماره تماس" required>
+<input type="text" placeholder="مدل و سال ساخت تاکسی">
+<textarea placeholder="توضیحات و پیام شما" rows="4"></textarea>
+<label>انتخاب عکس خودرو:</label>
+<input type="file" accept="image/*" multiple>
+<button type="submit">ارسال درخواست به مدیر</button>
+</form>
+</section>
+</div>
+
+<aside class="ad">
+<h3>جایگاه تبلیغات</h3>
+<p>فضای ویژه آگهی‌های تبلیغاتی</p>
+</aside>
+
+</div>
+</main>
+
+<footer>
+تعاونی تاکسیرانی نویدرفاه اسرار
+<br>
+سامانه جامع خدمات، اطلاع‌رسانی و خرید و فروش تاکسی
+</footer>
+
+</body>
+</html>
+
