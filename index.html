@@ -3,139 +3,299 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10243a">
 <title>تعاونی تاکسیرانی نویدرفاه اسرار</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+:root{
+--navy:#10243a;
+--navy2:#183750;
+--gold:#e8b44c;
+--bg:#f4f7fa;
+--text:#24364a;
+--muted:#738194;
+--white:#fff;
+}
 *{box-sizing:border-box}
 body{
- margin:0;font-family:Vazirmatn,Tahoma,sans-serif;
- background:#f3f3f3;color:#222;
+margin:0;
+font-family:'Vazirmatn',Tahoma,sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.9
 }
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
 header{
- background:linear-gradient(120deg,#171717,#343434);
- color:white;text-align:center;padding:35px 15px;
- border-bottom:7px solid #f5c400;
+background:var(--navy);
+color:white;
+position:sticky;
+top:0;
+z-index:10;
+box-shadow:0 4px 20px #0b1b2b30
 }
-header h1{font-size:clamp(25px,5vw,40px);margin:0}
-header p{color:#f5c400;font-size:17px}
-nav{background:#222;text-align:center;padding:14px}
-nav a{color:white;text-decoration:none;margin:0 13px}
-nav a:hover{color:#f5c400}
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:14px 0;
+gap:15px
+}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+width:48px;height:48px;border-radius:15px;
+background:var(--gold);display:grid;place-items:center;
+font-size:26px
+}
+.brand h1{font-size:17px;margin:0;font-weight:800}
+.brand small{font-size:11px;color:#c3d0dc}
+nav{display:flex;gap:22px;align-items:center;font-size:13px}
+nav a:hover{color:var(--gold)}
+.contact-nav{
+background:var(--gold);color:var(--navy);
+padding:9px 15px;border-radius:10px;font-weight:800
+}
 .hero{
- padding:55px 15px;text-align:center;color:white;
- background:linear-gradient(#171717aa,#171717bb),
- url('sabzdaran.jpg') center/cover;
+background:linear-gradient(120deg,#10243a,#1c4661 65%,#244f68);
+color:white;
+position:relative;
+overflow:hidden;
+padding:85px 0 90px
 }
-.hero h2{font-size:30px}
-.taxi{font-size:85px;margin:15px}
+.hero:before{
+content:"";
+position:absolute;
+width:440px;height:440px;border-radius:50%;
+border:1px solid #ffffff12;
+left:-100px;top:-130px;
+box-shadow:0 0 0 45px #ffffff06,0 0 0 95px #ffffff04
+}
+.hero-content{position:relative;max-width:680px}
+.tag{
+display:inline-block;border:1px solid #e8b44c70;
+color:var(--gold);padding:5px 13px;border-radius:50px;
+font-size:12px;margin-bottom:20px
+}
+.hero h2{font-size:clamp(30px,5vw,50px);line-height:1.5;margin:0 0 15px;font-weight:800}
+.hero h2 span{color:var(--gold)}
+.hero p{color:#d0dbe5;font-size:15px;max-width:540px;margin-bottom:28px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
 .btn{
- display:inline-block;background:#f5c400;color:#171717;
- padding:11px 22px;border-radius:9px;text-decoration:none;
- font-weight:bold;margin-top:10px
+padding:12px 20px;border-radius:12px;font-family:inherit;
+font-size:14px;font-weight:700;display:inline-block
 }
-.container{max-width:1150px;margin:30px auto;padding:0 15px}
-.layout{display:grid;grid-template-columns:180px 1fr 180px;gap:18px}
-.ad,.panel{
- background:white;border-radius:14px;padding:22px;
- box-shadow:0 3px 15px #00000010;
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-light{border:1px solid #ffffff50;color:white}
+.hero-bottom{
+margin-top:55px;display:flex;gap:35px;flex-wrap:wrap;
+border-top:1px solid #ffffff20;padding-top:23px
 }
-.ad{text-align:center;border:2px dashed #d4aa00;min-height:230px}
-.panel h2{border-right:5px solid #f5c400;padding-right:12px}
-.news{text-align:center;padding:30px;color:#777}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
-.car-card{background:white;border:1px solid #ddd;border-radius:12px;padding:17px}
-.car-card h3{margin-top:0}
-.price{color:#b38a00;font-weight:bold}
-form input,form textarea{
- display:block;width:100%;padding:12px;margin:12px 0;
- border:1px solid #ccc;border-radius:8px;font:inherit
+.hero-bottom strong{font-size:15px}
+.hero-bottom small{display:block;color:#bdcbd7;font-size:11px}
+section{padding:65px 0}
+.section-head{text-align:center;margin-bottom:35px}
+.section-head small{color:#c18b23;font-weight:700}
+.section-head h2{font-size:27px;margin:5px 0 10px;color:var(--navy)}
+.section-head p{font-size:13px;color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+background:white;border:1px solid #e8edf2;border-radius:19px;
+padding:25px;box-shadow:0 8px 24px #17344b07;
+transition:.2s
 }
-form button{
- background:#f5c400;border:0;padding:12px 25px;
- border-radius:8px;font:inherit;font-weight:bold;cursor:pointer
+.card:hover{transform:translateY(-4px);box-shadow:0 15px 32px #17344b12}
+.card-icon{
+width:52px;height:52px;border-radius:15px;background:#fff5df;
+display:grid;place-items:center;font-size:25px;margin-bottom:16px
 }
-footer{background:#222;color:white;text-align:center;padding:25px;margin-top:35px}
+.card h3{margin:0 0 8px;font-size:17px}
+.card p{margin:0;font-size:13px;color:var(--muted)}
+.ads-area{
+background:#fff;border:1px solid #e8edf2;border-radius:20px;
+padding:40px;text-align:center
+}
+.ads-icon{font-size:42px}
+.ads-area h3{margin:10px 0}
+.ads-area p{font-size:13px;color:var(--muted)}
+.contact-section{background:#eaf0f5}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.contact-info{
+background:var(--navy);color:white;border-radius:22px;padding:30px
+}
+.contact-info h3{font-size:22px;margin-top:0}
+.contact-info p{font-size:13px;color:#c6d4df}
+.info-item{
+margin-top:20px;padding:15px;border:1px solid #ffffff22;
+border-radius:13px;font-size:13px
+}
+.info-item strong{display:block;color:var(--gold);margin-bottom:3px}
+.form-box{background:white;border-radius:22px;padding:28px}
+.form-box h3{margin-top:0}
+label{display:block;font-size:12px;font-weight:700;margin:13px 0 5px}
+input,textarea{
+width:100%;padding:12px;border:1px solid #e1e7ee;border-radius:10px;
+font-family:inherit;font-size:13px;outline:none;background:#fbfcfd
+}
+input:focus,textarea:focus{border-color:#d8a436}
+textarea{min-height:110px;resize:vertical}
+.submit{
+background:var(--navy);color:white;border:0;padding:13px;
+border-radius:11px;width:100%;margin-top:16px;font-family:inherit;
+font-weight:700;cursor:pointer
+}
+.note{font-size:11px;color:var(--muted);margin-top:12px}
+footer{background:#0c1c2b;color:#d0dbe5;padding:30px 0}
+.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+footer small{color:#98a9b9}
 @media(max-width:750px){
- .layout{grid-template-columns:1fr}
- .ad{min-height:110px}
- nav a{display:inline-block;margin:5px}
+nav{gap:12px;font-size:11px}
+nav a:not(.contact-nav){display:none}
+.hero{padding:60px 0}
+.cards{grid-template-columns:1fr}
+.contact-grid{grid-template-columns:1fr}
+.section-head h2{font-size:23px}
+.ads-area{padding:25px}
+.brand h1{font-size:14px}
 }
 </style>
 </head>
 <body>
 
 <header>
-<h1>تعاونی تاکسیرانی نویدرفاه اسرار</h1>
-<p>سامانه جامع خدمات، اطلاع‌رسانی و خرید و فروش تاکسی</p>
+<div class="container nav">
+<div class="brand">
+<div class="logo">🚕</div>
+<div>
+<h1>نویدرفاه اسرار</h1>
+<small>تعاونی تاکسیرانی</small>
+</div>
+</div>
+<nav>
+<a href="#home">خانه</a>
+<a href="#services">خدمات</a>
+<a href="#ads">خرید و فروش</a>
+<a href="#contact" class="contact-nav">ارتباط با مدیر</a>
+</nav>
+</div>
 </header>
 
-<nav>
-<a href="#home">صفحه اصلی</a>
-<a href="#news">اخبار و رویدادها</a>
-<a href="#cars">خرید و فروش تاکسی</a>
-<a href="#contact">ارتباط با مدیر</a>
-</nav>
+<main>
+<div class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+<div class="tag">✦ سامانه خدمات تاکسیرانی</div>
+<h2>همراه مطمئن شما<br>در مسیر <span>خرید و فروش تاکسی</span></h2>
+<p>مرجع آگهی خرید و فروش تاکسی، خدمات رانندگان و ارتباط مستقیم با تعاونی تاکسیرانی نویدرفاه اسرار.</p>
+<div class="buttons">
+<a href="#ads" class="btn btn-gold">مشاهده آگهی‌ها ←</a>
+<a href="#contact" class="btn btn-light">ارتباط با مدیر</a>
+</div>
+<div class="hero-bottom">
+<div><strong>🚖 خرید و فروش</strong><small>آگهی خودروهای تاکسی</small></div>
+<div><strong>🤝 پشتیبانی</strong><small>ارتباط با تعاونی</small></div>
+<div><strong>🔒 ارتباط مستقیم</strong><small>ارسال پیام خصوصی</small></div>
+</div>
+</div>
+</div>
 
-<section class="hero" id="home">
-<h2>به سامانه تعاونی تاکسیرانی نویدرفاه اسرار خوش آمدید</h2>
-<div class="taxi">🚕</div>
-<p>همراه شما در خدمات و معاملات تاکسی</p>
-<a class="btn" href="#cars">مشاهده آگهی‌های تاکسی</a>
-</section>
-
-<main class="container">
-<div class="layout">
-
-<aside class="ad">
-<h3>جایگاه تبلیغات</h3>
-<p>فضای معرفی کسب‌وکارها و خدمات مرتبط</p>
-</aside>
-
-<div>
-<section class="panel" id="news">
-<h2>اخبار و رویدادها</h2>
-<div class="news">
-هنوز خبری ثبت نشده است.
+<section id="services">
+<div class="container">
+<div class="section-head">
+<small>خدمات ما</small>
+<h2>همه چیز برای رانندگان تاکسی</h2>
+<p>خدمات و امکانات تعاونی در یک مکان</p>
+</div>
+<div class="cards">
+<div class="card">
+<div class="card-icon">🚘</div>
+<h3>خرید و فروش تاکسی</h3>
+<p>مشاهده آگهی‌های خرید و فروش تاکسی و اطلاعات خودروهای موجود.</p>
+</div>
+<div class="card">
+<div class="card-icon">📋</div>
+<h3>اطلاع‌رسانی</h3>
+<p>دسترسی به اخبار، اطلاعیه‌ها و مطالب مرتبط با رانندگان و تعاونی.</p>
+</div>
+<div class="card">
+<div class="card-icon">📞</div>
+<h3>ارتباط با مدیر</h3>
+<p>ارسال درخواست، پیشنهاد، پیام و تصویر به مدیریت تعاونی.</p>
+</div>
+</div>
 </div>
 </section>
 
-<section class="panel" id="cars" style="margin-top:20px">
-<h2>آگهی‌های خرید و فروش تاکسی</h2>
-<p>آگهی‌های تأییدشده تعاونی در این بخش نمایش داده می‌شوند.</p>
-<div class="news">در حال حاضر آگهی‌ای برای نمایش ثبت نشده است.</div>
+<section id="ads">
+<div class="container">
+<div class="section-head">
+<small>بازار تاکسی</small>
+<h2>آگهی‌های خرید و فروش</h2>
+<p>آگهی‌های ثبت‌شده توسط مدیریت تعاونی</p>
+</div>
+<div class="ads-area">
+<div class="ads-icon">🚕</div>
+<h3>آگهی جدیدی موجود نیست</h3>
+<p>به‌زودی آگهی‌های خرید و فروش تاکسی در این بخش قرار می‌گیرند.</p>
+</div>
+</div>
 </section>
 
-<section class="panel" id="contact" style="margin-top:20px">
-<h2>ارتباط با مدیر تعاونی</h2>
-<p>برای ارسال درخواست فروش تاکسی، مشخصات و تصاویر خودرو را آماده کنید.</p>
-<form onsubmit="event.preventDefault();alert('برای ارسال واقعی پیام و عکس، باید سامانه دریافت اطلاعات به سایت متصل شود.');">
-<input type="text" placeholder="نام و نام خانوادگی" required>
-<input type="tel" placeholder="شماره تماس" required>
-<input type="text" placeholder="مدل و سال ساخت تاکسی">
-<textarea placeholder="توضیحات و پیام شما" rows="4"></textarea>
-<label>انتخاب عکس خودرو:</label>
+<section id="contact" class="contact-section">
+<div class="container">
+<div class="section-head">
+<small>در تماس باشیم</small>
+<h2>ارتباط با مدیریت تعاونی</h2>
+<p>پیام، درخواست یا تصویر خود را برای مدیر ارسال کنید</p>
+</div>
+<div class="contact-grid">
+<div class="contact-info">
+<h3>در کنار شما هستیم 🤝</h3>
+<p>برای دریافت راهنمایی، ثبت درخواست یا ارائه پیشنهاد با ما در ارتباط باشید.</p>
+<div class="info-item">
+<strong>☎ تلفن مدیریت</strong>
+09157650784
+</div>
+<div class="info-item">
+<strong>📍 تعاونی تاکسیرانی</strong>
+نویدرفاه اسرار
+</div>
+<div class="info-item">
+<strong>🔐 حفظ حریم خصوصی</strong>
+پیام‌ها و تصاویر شما برای نمایش عمومی در سایت نیستند.
+</div>
+</div>
+<div class="form-box">
+<h3>ارسال پیام</h3>
+<form id="contactForm">
+<label>نام و نام خانوادگی</label>
+<input type="text" placeholder="نام شما" required>
+<label>شماره موبایل</label>
+<input type="tel" placeholder="09xxxxxxxxx" required>
+<label>متن پیام</label>
+<textarea placeholder="پیام خود را بنویسید..." required></textarea>
+<label>ضمیمه عکس (اختیاری)</label>
 <input type="file" accept="image/*" multiple>
-<button type="submit">ارسال درخواست به مدیر</button>
+<button type="submit" class="submit">ارسال پیام</button>
 </form>
+<p class="note">این فرم هنوز به سامانه ارسال و ذخیره پیام متصل نشده است. برای ارسال واقعی و خصوصی پیام و تصاویر، اتصال سرور لازم است.</p>
+</div>
+</div>
+</div>
 </section>
-</div>
-
-<aside class="ad">
-<h3>جایگاه تبلیغات</h3>
-<p>فضای ویژه آگهی‌های تبلیغاتی</p>
-</aside>
-
-</div>
 </main>
 
 <footer>
-تعاونی تاکسیرانی نویدرفاه اسرار
-<br>
-سامانه جامع خدمات، اطلاع‌رسانی و خرید و فروش تاکسی
+<div class="container footer-row">
+<div>🚕 <strong>تعاونی تاکسیرانی نویدرفاه اسرار</strong></div>
+<small>© تمامی حقوق محفوظ است.</small>
+</div>
 </footer>
-
+<script>
+document.getElementById('contactForm').addEventListener('submit',function(e){
+e.preventDefault();
+alert('فرم ظاهری آماده است؛ برای ارسال واقعی پیام و عکس، باید سامانه ذخیره و ارسال متصل شود.');
+});
+</script>
 </body>
 </html>
-
