@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -8,310 +7,38 @@
 <title>تعاونی تاکسیرانی نویدرفاه اسرار</title>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-.topbar{
-background:repeating-conic-gradient(#222 0% 25%,#ffca05 0% 50%) 0 0/32px 32px;
-color:#111;
-padding:10px 0;
-font-size:12px;
-font-weight:800;
-}
-.toprow{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.brand{background:linear-gradient(120deg,#06172d,#123c68,#06172d);
-border-bottom:5px solid var(--gold);color:white}
-.brandrow{display:flex;align-items:center;gap:18px;padding:13px 0}
-.logo{width:95px;height:95px;object-fit:contain;background:#fff;
-border:4px solid var(--gold);border-radius:50%;padding:4px}
-.brand h1{color:var(--gold);font-size:clamp(21px,4vw,39px);
-margin:0;font-weight:900;text-shadow:1px 2px 3px #000}
-.brand p{margin:3px 0 0;font-size:13px}
-nav{background:#0a2747;color:white;box-shadow:0 4px 12px #0002}
-.navrow{display:flex;gap:5px;align-items:center;flex-wrap:wrap;padding:8px 0}
-nav a{padding:8px 11px;border-radius:9px;font-size:12px;font-weight:800}
-nav a:hover,nav a.active{background:var(--gold);color:#071a33}
-.hero{height:390px;margin:16px auto;border-radius:17px;overflow:hidden;
-position:relative;background:#0a2848}
-.hero img{width:100%;height:100%;object-fit:cover;display:block}
-.hero:after{content:"";position:absolute;inset:0;
-background:linear-gradient(90deg,#06172d99,transparent 75%)}
-.hero-caption{position:absolute;z-index:2;right:5%;bottom:35px;color:white;
-max-width:480px;text-shadow:1px 2px 5px #000}
-.hero-caption h2{font-size:clamp(23px,4vw,38px);margin:0;color:var(--gold)}
-.hero-caption p{font-size:14px}
-.btn{display:inline-block;border:0;border-radius:10px;padding:9px 17px;
-font-weight:800;font-size:13px}
-.yellow{background:var(--gold);color:#071a33}
-.dark{background:var(--navy);color:white}
-.layout{display:grid;grid-template-columns:2fr .85fr;gap:14px}
-.panel{background:white;border:1px solid #d6e0eb;border-radius:15px;
-overflow:hidden;box-shadow:0 4px 16px #102d4a14}
-.panel-title{background:linear-gradient(90deg,#06182f,#174675);
-color:var(--gold);padding:10px 15px;font-weight:900;
-display:flex;justify-content:space-between;align-items:center}
-.news{position:relative;min-height:260px;background:linear-gradient(130deg,#0c3158,#06172d);
-color:white;padding:30px 55px;display:flex;align-items:center}
-.slide{display:none;max-width:650px}
-.slide.active{display:block;animation:fade .5s}
-@keyframes fade{from{opacity:.3}to{opacity:1}}
-.slide small{color:var(--gold);font-weight:800}
-.slide h2{font-size:22px;margin:8px 0}
-.slide p{font-size:13px;color:#d9e5f2}
-.arrow{position:absolute;top:45%;width:38px;height:38px;border-radius:50%;
-border:1px solid #ffffff77;background:#071a33;color:white;font-size:23px}
-.prev{right:9px}.next{left:9px}
-.dots{display:flex;gap:7px;justify-content:center;padding:12px}
-.dot{width:9px;height:9px;background:#aab9c8;border:0;border-radius:50%;padding:0}
-.dot.active{background:var(--gold)}
-.side{display:grid;gap:14px}
-.sidebody{padding:15px}
-.sidebody h3{margin:0 0 5px;font-size:15px;color:#12375d}
-.sidebody p{font-size:12px;color:#63758a;margin:0}
-.shortcuts{display:grid;grid-template-columns:repeat(6,1fr);gap:11px;margin:16px 0}
-.shortcut{border-radius:14px;min-height:120px;padding:12px 5px;
-display:flex;flex-direction:column;align-items:center;justify-content:center;
-gap:7px;text-align:center;color:white;background:linear-gradient(145deg,#071b35,#155080);
-border:2px solid #2b5c89;box-shadow:0 4px 10px #0002}
-.shortcut:nth-child(even){background:linear-gradient(145deg,#ffe45a,#f2b600);
-color:#081a32;border-color:#ffe98a}
-.shortcut b{font-size:12px;line-height:1.5}
-.shortcut span{font-size:29px}
-.lower{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}
-.bodypanel{padding:14px}
-.bodypanel p{font-size:12px;color:#5c6e82}
-.list{list-style:none;padding:0;margin:0}
-.list li{font-size:12px;padding:9px 0;border-bottom:1px solid #edf0f4}
-.list li:before{content:"●";color:#e7b600;margin-left:8px}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
-.gallery img{width:100%;height:100px;object-fit:cover;border-radius:8px}
-.contact{margin:0 0 20px}
-.footer{background:linear-gradient(120deg,#06172d,#123e69);
-border-top:5px solid var(--gold);color:white;padding:25px 0}
-.footrow{display:flex;justify-content:space-between;align-items:center;
-gap:12px;flex-wrap:wrap}
-.footrow strong{font-size:22px}
-.footrow strong span{color:var(--gold)}
-@media(max-width:850px){
- .layout{grid-template-columns:1fr}
- .shortcuts{grid-template-columns:repeat(3,1fr)}
- .lower{grid-template-columns:1fr}
- .hero{height:310px}
-}
-@media(max-width:520px){
- .logo{width:68px;height:68px}
- .brandrow{gap:10px}
- .brand p{font-size:10px}
- nav a{font-size:11px;padding:6px 8px}
- .hero{height:260px}
- .hero-caption{right:4%;bottom:15px;max-width:85%}
- .hero-caption p{font-size:11px}
- .news{padding:25px 42px;min-height:250px}
- .slide h2{font-size:18px}
- .shortcuts{grid-template-columns:repeat(2,1fr)}
-}
+:root{--gold:#ffca05;--navy:#071a33;--blue:#123c68;--ink:#15283d;--muted:#62758b;--paper:#f2f6fa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.8}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,94%);margin-inline:auto}
+.topbar{background:repeating-conic-gradient(#222 0% 25%,var(--gold) 0% 50%) 0 0/32px 32px;color:#111;padding:8px 0;font-size:12px;font-weight:800}.toprow{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.brand{background:linear-gradient(120deg,#06172d,#123c68,#06172d);border-bottom:5px solid var(--gold);color:white}.brandrow{display:flex;align-items:center;gap:16px;padding:13px 0}.logo{width:90px;height:90px;display:grid;place-items:center;background:#fff;color:var(--navy);border:4px solid var(--gold);border-radius:50%;font-size:40px;flex-shrink:0}.brand h1{color:var(--gold);font-size:clamp(20px,4vw,38px);margin:0;font-weight:900;text-shadow:1px 2px 3px #000}.brand p{margin:2px 0 0;font-size:13px}
+nav{background:#0a2747;color:white;box-shadow:0 4px 12px #0002}.navrow{display:flex;gap:5px;align-items:center;flex-wrap:wrap;padding:8px 0}nav a{padding:7px 10px;border-radius:9px;font-size:12px;font-weight:800}nav a:hover,nav a.active{background:var(--gold);color:var(--navy)}
+.hero{min-height:330px;margin:16px auto;border-radius:17px;overflow:hidden;position:relative;background:radial-gradient(circle at 75% 30%,#2f6b9a 0%,transparent 30%),linear-gradient(130deg,#06172d,#164a76 60%,#071a33);display:flex;align-items:center;padding:36px;color:white}.hero:before{content:"🚕";position:absolute;left:5%;bottom:20px;font-size:clamp(90px,20vw,210px);opacity:.25;filter:drop-shadow(0 10px 6px #0005)}.hero:after{content:"🏛️";position:absolute;left:26%;bottom:30px;font-size:clamp(50px,12vw,110px);opacity:.25}.hero-caption{position:relative;z-index:2;max-width:600px}.hero-caption h2{font-size:clamp(24px,4vw,40px);margin:0;color:var(--gold)}.hero-caption p{font-size:15px;color:#e6eff8}
+.btn{display:inline-block;border:0;border-radius:10px;padding:9px 17px;font-weight:800;font-size:13px;margin-top:7px}.yellow{background:var(--gold);color:var(--navy)}.dark{background:var(--navy);color:white}
+.layout{display:grid;grid-template-columns:2fr .85fr;gap:14px}.panel{background:white;border:1px solid #d6e0eb;border-radius:15px;overflow:hidden;box-shadow:0 4px 16px #102d4a14}.panel-title{background:linear-gradient(90deg,#06182f,#174675);color:var(--gold);padding:10px 15px;font-weight:900;display:flex;justify-content:space-between;align-items:center;gap:8px}.news{position:relative;min-height:250px;background:linear-gradient(130deg,#0c3158,#06172d);color:white;padding:28px 50px;display:flex;align-items:center}.slide{display:none;max-width:650px}.slide.active{display:block;animation:fade .4s}@keyframes fade{from{opacity:.3}to{opacity:1}}.slide small{color:var(--gold);font-weight:800}.slide h2{font-size:21px;margin:8px 0}.slide p{font-size:13px;color:#d9e5f2}.arrow{position:absolute;top:45%;width:38px;height:38px;border-radius:50%;border:1px solid #ffffff77;background:#071a33;color:white;font-size:23px;cursor:pointer}.prev{right:9px}.next{left:9px}.dots{display:flex;gap:7px;justify-content:center;padding:12px}.dot{width:9px;height:9px;background:#aab9c8;border:0;border-radius:50%;padding:0;cursor:pointer}.dot.active{background:var(--gold)}
+.side{display:grid;gap:14px}.sidebody{padding:15px}.sidebody h3{margin:0 0 5px;font-size:15px;color:#12375d}.sidebody p{font-size:12px;color:var(--muted);margin:0}
+.shortcuts{display:grid;grid-template-columns:repeat(6,1fr);gap:11px;margin:16px 0}.shortcut{border-radius:14px;min-height:115px;padding:12px 5px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;text-align:center;color:white;background:linear-gradient(145deg,#071b35,#155080);border:2px solid #2b5c89;box-shadow:0 4px 10px #0002}.shortcut:nth-child(even){background:linear-gradient(145deg,#ffe45a,#f2b600);color:#081a32;border-color:#ffe98a}.shortcut b{font-size:12px;line-height:1.5}.shortcut span{font-size:29px}
+.lower{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}.bodypanel{padding:14px}.bodypanel p{font-size:12px;color:#5c6e82}.list{list-style:none;padding:0;margin:0}.list li{font-size:12px;padding:9px 0;border-bottom:1px solid #edf0f4}.list li:before{content:"●";color:#e7b600;margin-left:8px}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.gallery div{height:90px;border-radius:8px;background:linear-gradient(145deg,#0c3158,#e9b800);display:grid;place-items:center;font-size:32px}.contact{margin:0 0 20px}.footer{background:linear-gradient(120deg,#06172d,#123e69);border-top:5px solid var(--gold);color:white;padding:25px 0}.footrow{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.footrow strong{font-size:22px}.footrow strong span{color:var(--gold)}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.shortcuts{grid-template-columns:repeat(3,1fr)}.lower{grid-template-columns:1fr}.hero{min-height:300px}}
+@media(max-width:520px){.logo{width:66px;height:66px;font-size:30px}.brandrow{gap:10px}.brand p{font-size:10px}nav a{font-size:11px;padding:6px 8px}.hero{min-height:255px;padding:22px}.hero-caption p{font-size:12px}.news{padding:23px 40px;min-height:245px}.slide h2{font-size:18px}.shortcuts{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
-
-<div class="topbar">
- <div class="wrap toprow">
-  <span>📅 پایگاه اطلاع‌رسانی تعاونی تاکسیرانی</span>
-  <span>☎ تماس با مدیر: ۰۹۱۵۷۶۵۰۷۸۴</span>
- </div>
-</div>
-
-<header class="brand">
- <div class="wrap brandrow">
-  <img class="logo" src="assets/logo-taxi.webp" alt="لوگوی تعاونی">
-  <div>
-   <h1>تعاونی تاکسیرانی نویدرفاه اسرار</h1>
-   <p>مرجع اخبار، خدمات و آگهی‌های تاکسیرانی</p>
-  </div>
- </div>
-</header>
-
-<nav>
- <div class="wrap navrow">
-  <a class="active" href="#home">🏠 خانه</a>
-  <a href="#news">اخبار</a>
-  <a href="#notices">🔔 اطلاعیه‌ها</a>
-  <a href="#rules">⚖ قوانین و مقررات</a>
-  <a href="#services">🎓 آموزش رانندگان</a>
-  <a href="#services">⚙ خدمات</a>
-  <a href="#ads">🚕 آگهی خرید و فروش</a>
-  <a href="#contact">☎ تماس با ما</a>
- </div>
-</nav>
-
+<div class="topbar"><div class="wrap toprow"><span>📅 پایگاه اطلاع‌رسانی تعاونی تاکسیرانی</span><span>☎ تماس با مدیر: ۰۹۱۵۷۶۵۰۷۸۴</span></div></div>
+<header class="brand"><div class="wrap brandrow"><div class="logo" aria-hidden="true">🚕</div><div><h1>تعاونی تاکسیرانی نویدرفاه اسرار</h1><p>مرجع اخبار، خدمات و آگهی‌های تاکسیرانی</p></div></div></header>
+<nav><div class="wrap navrow"><a class="active" href="#home">🏠 خانه</a><a href="#news">اخبار</a><a href="#notices">🔔 اطلاعیه‌ها</a><a href="#rules">⚖ قوانین و مقررات</a><a href="#services">🎓 آموزش رانندگان</a><a href="#services">⚙ خدمات</a><a href="#ads">🚕 آگهی خرید و فروش</a><a href="#contact">☎ تماس با ما</a></div></nav>
 <main class="wrap" id="home">
-
-<section class="hero">
- <img src="assets/hero-sabzevar.jpg" alt="تاکسی و مجسمه‌های سربداران سبزوار">
- <div class="hero-caption">
-  <h2>همراه مطمئن رانندگان سبزوار</h2>
-  <p>خدمات تعاونی، اطلاع‌رسانی و خرید و فروش تاکسی</p>
-  <a class="btn yellow" href="#ads">مشاهده آگهی‌ها ←</a>
- </div>
-</section>
-
-<div class="layout">
- <section class="panel" id="news">
-  <div class="panel-title"><span>📰 آخرین اخبار و گزارش‌ها</span><span>اخبار تعاونی</span></div>
-  <div class="news">
-   <button class="arrow prev" onclick="moveSlide(-1)" aria-label="خبر قبلی">›</button>
-   <article class="slide active">
-    <small>گزارش جلسات تعاونی</small>
-    <h2>گزارش جلسه هیئت‌مدیره تعاونی</h2>
-    <p>گزارش جلسات و تصمیمات تعاونی پس از انتشار رسمی در این بخش قرار می‌گیرد.</p>
-    <a class="btn yellow" href="#notices">ادامه مطلب ←</a>
-   </article>
-   <article class="slide">
-    <small>بازدید مسئولان</small>
-    <h2>اخبار بازدیدها و دیدارهای مسئولان</h2>
-    <p>گزارش بازدیدها و برنامه‌های مرتبط با رانندگان در این قسمت منتشر می‌شود.</p>
-    <a class="btn yellow" href="#notices">ادامه مطلب ←</a>
-   </article>
-   <article class="slide">
-    <small>مراسم و مناسبت‌ها</small>
-    <h2>مراسم و رویدادهای تعاونی</h2>
-    <p>اطلاع‌رسانی مراسم و رویدادهای رسمی تعاونی.</p>
-    <a class="btn yellow" href="#notices">ادامه مطلب ←</a>
-   </article>
-   <article class="slide">
-    <small>اخبار سبزوار</small>
-    <h2>اخبار و رویدادهای شهرستان سبزوار</h2>
-    <p>اخبار مرتبط با حمل‌ونقل و رانندگان در این بخش قرار خواهد گرفت.</p>
-    <a class="btn yellow" href="#notices">ادامه مطلب ←</a>
-   </article>
-   <article class="slide">
-    <small>طرح‌های رانندگان</small>
-    <h2>طرح‌ها و پیشنهادهای ویژه رانندگان</h2>
-    <p>طرح‌ها و اطلاعیه‌های مهم پس از تأیید مدیریت منتشر می‌شوند.</p>
-    <a class="btn yellow" href="#notices">ادامه مطلب ←</a>
-   </article>
-   <button class="arrow next" onclick="moveSlide(1)" aria-label="خبر بعدی">‹</button>
-  </div>
-  <div class="dots" id="dots"></div>
- </section>
-
- <aside class="side">
-  <section class="panel">
-   <div class="panel-title">📅 تقویم تعاونی</div>
-   <div class="sidebody">
-    <h3>تقویم و مناسبت‌ها</h3>
-    <p>برنامه جلسات و مناسبت‌های تعاونی در این قسمت اطلاع‌رسانی خواهد شد.</p>
-   </div>
-  </section>
-  <section class="panel">
-   <div class="panel-title">🔔 اطلاعیه‌های مهم</div>
-   <div class="sidebody">
-    <h3>اطلاعیه‌های ویژه رانندگان</h3>
-    <p>برای مشاهده اطلاعیه‌های رسمی تعاونی این بخش را دنبال کنید.</p>
-    <a class="btn dark" href="#notices" style="margin-top:10px">مشاهده اطلاعیه‌ها</a>
-   </div>
-  </section>
-  <section class="panel">
-   <div class="panel-title">📍 سبزوار</div>
-   <div class="sidebody">
-    <h3>شهر سربداران</h3>
-    <p>تعاونی تاکسیرانی نویدرفاه اسرار، همراه رانندگان سبزوار.</p>
-   </div>
-  </section>
- </aside>
-</div>
-
-<section class="shortcuts" id="services">
- <a class="shortcut" href="#ads"><span>🚕</span><b>خرید و فروش تاکسی</b></a>
- <a class="shortcut" href="#notices"><span>🔔</span><b>آگهی‌ها و اطلاعیه‌ها</b></a>
- <a class="shortcut" href="#rules"><span>％</span><b>تخفیف‌ها و پیشنهادها</b></a>
- <a class="shortcut" href="#rules"><span>🎓</span><b>آموزش رانندگان</b></a>
- <a class="shortcut" href="#contact"><span>🔧</span><b>خدمات فنی و تعمیرگاه‌ها</b></a>
- <a class="shortcut" href="#gallery"><span>🖼️</span><b>گالری تصاویر</b></a>
-</section>
-
-<div class="lower">
- <section class="panel" id="gallery">
-  <div class="panel-title">📷 گالری تصاویر</div>
-  <div class="bodypanel">
-   <div class="gallery">
-    <img src="assets/hero-sabzevar.jpg" alt="سبزوار">
-    <img src="assets/hero-sabzevar.jpg" alt="تاکسی">
-    <img src="assets/hero-sabzevar.jpg" alt="مجسمه‌های سربداران">
-   </div>
-   <p>تصاویر شهر سبزوار و فعالیت‌های تعاونی</p>
-  </div>
- </section>
-
- <section class="panel" id="notices">
-  <div class="panel-title">🔔 اطلاعیه‌های ویژه</div>
-  <div class="bodypanel">
-   <ul class="list">
-    <li>اطلاعیه‌های مهم تعاونی</li>
-    <li>تمدید مدارک تاکسیرانی</li>
-    <li>طرح‌ها و پیشنهادهای رانندگان</li>
-   </ul>
-   <p>محتوای اطلاعیه‌ها باید توسط مدیریت ثبت و تأیید شود.</p>
-  </div>
- </section>
-
- <section class="panel" id="ads">
-  <div class="panel-title">🚕 آگهی‌های خرید و فروش تاکسی</div>
-  <div class="bodypanel">
-   <p>آگهی‌های تأییدشده مدیریت در این بخش نمایش داده خواهند شد.</p>
-   <p>ثبت آگهی فقط توسط مدیر تعاونی انجام می‌شود.</p>
-   <a class="btn dark" href="#contact">ارتباط با مدیر</a>
-  </div>
- </section>
-</div>
-
-<section class="panel contact" id="contact">
- <div class="panel-title">☎ ارتباط با مدیر تعاونی</div>
- <div class="bodypanel">
-  <p>برای ارتباط با مدیریت تعاونی با شماره زیر تماس بگیرید.</p>
-  <a class="btn yellow" href="tel:09157650784">تماس با مدیر: ۰۹۱۵۷۶۵۰۷۸۴</a>
-  <p>فرم خصوصی ارسال پیام و عکس پس از اتصال به سامانه امن فعال خواهد شد.</p>
- </div>
-</section>
-
-<section class="panel contact" id="rules">
- <div class="panel-title">⚖ قوانین و آموزش رانندگان</div>
- <div class="bodypanel">
-  <p>محتوای قوانین، مقررات و آموزش‌های رانندگان در این بخش منتشر خواهد شد.</p>
- </div>
-</section>
-
-</main>
-
-<footer class="footer">
- <div class="wrap footrow">
-  <strong>در کنار هم <span>بهتر می‌سازیم</span></strong>
-  <span>🌐 navidrefahasrar.ir</span>
-  <span>☎ ۰۹۱۵۷۶۵۰۷۸۴</span>
- </div>
-</footer>
-
+<section class="hero"><div class="hero-caption"><h2>همراه مطمئن رانندگان سبزوار</h2><p>خدمات تعاونی، اطلاع‌رسانی و خرید و فروش تاکسی</p><a class="btn yellow" href="#ads">مشاهده آگهی‌ها ←</a></div></section>
+<div class="layout"><section class="panel" id="news"><div class="panel-title"><span>📰 آخرین اخبار و گزارش‌ها</span><span>اخبار تعاونی</span></div><div class="news"><button class="arrow prev" onclick="moveSlide(-1)" aria-label="خبر قبلی">›</button>
+<article class="slide active"><small>گزارش جلسات تعاونی</small><h2>گزارش جلسه هیئت‌مدیره تعاونی</h2><p>گزارش جلسات و تصمیمات تعاونی پس از انتشار رسمی در این بخش قرار می‌گیرد.</p><a class="btn yellow" href="#notices">ادامه مطلب ←</a></article>
+<article class="slide"><small>بازدید مسئولان</small><h2>اخبار بازدیدها و دیدارهای مسئولان</h2><p>گزارش بازدیدها و برنامه‌های مرتبط با رانندگان در این قسمت قرار می‌گیرد.</p><a class="btn yellow" href="#notices">ادامه مطلب ←</a></article>
+<article class="slide"><small>مراسم و مناسبت‌ها</small><h2>مراسم و رویدادهای تعاونی</h2><p>اطلاع‌رسانی مراسم و رویدادهای رسمی تعاونی.</p><a class="btn yellow" href="#notices">ادامه مطلب ←</a></article>
+<article class="slide"><small>اخبار سبزوار</small><h2>اخبار و رویدادهای شهرستان سبزوار</h2><p>اخبار مرتبط با حمل‌ونقل و رانندگان در این بخش قرار خواهد گرفت.</p><a class="btn yellow" href="#notices">ادامه مطلب ←</a></article>
+<article class="slide"><small>طرح‌های رانندگان</small><h2>طرح‌ها و پیشنهادهای ویژه رانندگان</h2><p>طرح‌ها و اطلاعیه‌های مهم پس از تأیید مدیریت منتشر می‌شوند.</p><a class="btn yellow" href="#notices">ادامه مطلب ←</a></article><button class="arrow next" onclick="moveSlide(1)" aria-label="خبر بعدی">‹</button></div><div class="dots" id="dots"></div></section>
+<aside class="side"><section class="panel"><div class="panel-title">📅 تقویم تعاونی</div><div class="sidebody"><h3>تقویم و مناسبت‌ها</h3><p>برنامه جلسات و مناسبت‌های تعاونی در این قسمت اطلاع‌رسانی خواهد شد.</p></div></section><section class="panel"><div class="panel-title">🔔 اطلاعیه‌های مهم</div><div class="sidebody"><h3>اطلاعیه‌های ویژه رانندگان</h3><p>برای مشاهده اطلاعیه‌های رسمی تعاونی این بخش را دنبال کنید.</p><a class="btn dark" href="#notices">مشاهده اطلاعیه‌ها</a></div></section><section class="panel"><div class="panel-title">📍 سبزوار</div><div class="sidebody"><h3>شهر سربداران</h3><p>تعاونی تاکسیرانی نویدرفاه اسرار، همراه رانندگان سبزوار.</p></div></section></aside></div>
+<section class="shortcuts" id="services"><a class="shortcut" href="#ads"><span>🚕</span><b>خرید و فروش تاکسی</b></a><a class="shortcut" href="#notices"><span>🔔</span><b>آگهی‌ها و اطلاعیه‌ها</b></a><a class="shortcut" href="#rules"><span>％</span><b>تخفیف‌ها و پیشنهادها</b></a><a class="shortcut" href="#rules"><span>🎓</span><b>آموزش رانندگان</b></a><a class="shortcut" href="#contact"><span>🔧</span><b>خدمات فنی و تعمیرگاه‌ها</b></a><a class="shortcut" href="#gallery"><span>🖼️</span><b>گالری تصاویر</b></a></section>
+<div class="lower"><section class="panel" id="gallery"><div class="panel-title">📷 گالری تصاویر</div><div class="bodypanel"><div class="gallery"><div>🏙️</div><div>🚕</div><div>🏛️</div></div><p>تصاویر شهر سبزوار و فعالیت‌های تعاونی</p></div></section><section class="panel" id="notices"><div class="panel-title">🔔 اطلاعیه‌های ویژه</div><div class="bodypanel"><ul class="list"><li>اطلاعیه‌های مهم تعاونی</li><li>تمدید مدارک تاکسیرانی</li><li>طرح‌ها و پیشنهادهای رانندگان</li></ul><p>محتوای اطلاعیه‌ها باید توسط مدیریت ثبت و تأیید شود.</p></div></section><section class="panel" id="ads"><div class="panel-title">🚕 آگهی‌های خرید و فروش تاکسی</div><div class="bodypanel"><p>آگهی‌های تأییدشده مدیریت در این بخش نمایش داده خواهند شد.</p><p>ثبت آگهی فقط توسط مدیر تعاونی انجام می‌شود.</p><a class="btn dark" href="#contact">ارتباط با مدیر</a></div></section></div>
+<section class="panel contact" id="contact"><div class="panel-title">☎ ارتباط با مدیر تعاونی</div><div class="bodypanel"><p>برای ارتباط با مدیریت تعاونی با شماره زیر تماس بگیرید.</p><a class="btn yellow" href="tel:09157650784">تماس با مدیر: ۰۹۱۵۷۶۵۰۷۸۴</a><p>فرم خصوصی ارسال پیام و عکس پس از اتصال به سامانه امن فعال خواهد شد.</p></div></section><section class="panel contact" id="rules"><div class="panel-title">⚖ قوانین و آموزش رانندگان</div><div class="bodypanel"><p>محتوای قوانین، مقررات و آموزش‌های رانندگان در این بخش منتشر خواهد شد.</p></div></section>
+</main><footer class="footer"><div class="wrap footrow"><strong>در کنار هم <span>بهتر می‌سازیم</span></strong><span>🌐 navidrefahasrar.ir</span><span>☎ ۰۹۱۵۷۶۵۰۷۸۴</span></div></footer>
 <script>
-const slides=[...document.querySelectorAll('.slide')];
-const dotsBox=document.getElementById('dots');
-let current=0;
-let timer;
-slides.forEach((s,i)=>{
- const b=document.createElement('button');
- b.className='dot'+(i===0?' active':'');
- b.setAttribute('aria-label','نمایش خبر '+(i+1));
- b.addEventListener('click',()=>showSlide(i));
- dotsBox.appendChild(b);
-});
-const dots=[...dotsBox.children];
-function showSlide(n){
- current=(n+slides.length)%slides.length;
- slides.forEach((s,i)=>s.classList.toggle('active',i===current));
- dots.forEach((d,i)=>d.classList.toggle('active',i===current));
-}
-function moveSlide(n){showSlide(current+n);restartTimer()}
-function restartTimer(){
- clearInterval(timer);
- timer=setInterval(()=>showSlide(current+1),6500);
-}
-restartTimer();
-</script>
-</body>
-</html>
+(()=>{const slides=Array.from(document.querySelectorAll('.slide'));const dotsBox=document.getElementById('dots');if(!slides.length||!dotsBox)return;let current=0,timer;slides.forEach((_,i)=>{const b=document.createElement('button');b.className='dot'+(i===0?' active':'');b.setAttribute('aria-label','نمایش خبر '+(i+1));b.addEventListener('click',()=>showSlide(i));dotsBox.appendChild(b)});const dots=Array.from(dotsBox.children);function showSlide(n){current=(n+slides.length)%slides.length;slides.forEach((s,i)=>s.classList.toggle('active',i===current));dots.forEach((d,i)=>d.classList.toggle('active',i===current))}window.moveSlide=n=>{showSlide(current+n);restartTimer()};function restartTimer(){clearInterval(timer);timer=setInterval(()=>showSlide(current+1),6500)}restartTimer()})();
+</script></body></html>
